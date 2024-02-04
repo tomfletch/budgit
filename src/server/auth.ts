@@ -47,6 +47,9 @@ export const authOptions: NextAuthOptions = {
       },
     }),
   },
+  pages: {
+    signIn: "/sign-in",
+  },
   adapter: DrizzleAdapter(db, mysqlTable) as Adapter,
   providers: [
     GoogleProvider({
