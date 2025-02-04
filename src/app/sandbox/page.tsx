@@ -1,6 +1,6 @@
-import { db } from "@/db";
-import { budgetsTable, monthlyPaymentsTable } from "@/db/schema";
-import { monthlyPayments } from "@/mockData";
+import { db } from "@/server/db";
+import { budgetsTable, monthlyPaymentsTable } from "@/server/db/schema";
+import { monthlyPayments } from "@/app/sandbox/mockData";
 
 export default function SandboxPage() {
   async function createMonthlyPaymentsSeedData() {

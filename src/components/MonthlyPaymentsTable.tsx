@@ -1,8 +1,14 @@
-import { monthlyPayments } from "@/mockData";
 import { formatCurrency } from "@/utils/currency";
 import { getOrdinal } from "@/utils/dates";
+import { monthlyPaymentsTable } from "@/server/db/schema";
 
-export function MonthlyPaymentsTable() {
+type MonthlyPaymentsTableProps = {
+  monthlyPayments: (typeof monthlyPaymentsTable.$inferSelect)[];
+};
+
+export async function MonthlyPaymentsTable({
+  monthlyPayments,
+}: MonthlyPaymentsTableProps) {
   return (
     <table className="w-full text-sm">
       <thead className="border-b border-gray-500 text-gray-300 uppercase text-xs">

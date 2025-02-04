@@ -2,6 +2,7 @@ import { sql } from "drizzle-orm";
 import {
   int,
   singlestoreTable,
+  text,
   timestamp,
   varchar,
 } from "drizzle-orm/singlestore-core";
@@ -26,5 +27,6 @@ export const monthlyPaymentsTable = singlestoreTable("monthly_payments", {
   dayOfMonth: int({ unsigned: true }),
   company: varchar({ length: 255 }),
   reference: varchar({ length: 255 }),
+  notes: text(),
   ...timestamps,
 });
