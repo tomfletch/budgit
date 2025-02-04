@@ -23,7 +23,8 @@ export function MonthlyPaymentsTable() {
               {formatCurrency(monthlyPayment.amount)}
             </td>
             <td className="px-4 py-2">
-              {getOrdinal(monthlyPayment.dayOfMonth)}
+              {!!monthlyPayment.dayOfMonth &&
+                getOrdinal(monthlyPayment.dayOfMonth)}
             </td>
             <td className="px-4 py-2">{monthlyPayment.company}</td>
             <td className="px-4 py-2">{monthlyPayment.reference}</td>

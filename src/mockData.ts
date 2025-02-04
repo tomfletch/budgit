@@ -2,7 +2,7 @@ type MonthlyPayment = {
   id: number;
   type: string;
   amount: number;
-  dayOfMonth: number;
+  dayOfMonth?: number;
   company?: string;
   reference?: string;
   notes?: string;
