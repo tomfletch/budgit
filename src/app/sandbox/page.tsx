@@ -12,7 +12,7 @@ export default function SandboxPage() {
       monthlyPayments.map((p) => ({
         ...p,
         budgetId: 1,
-      }))
+      })),
     );
   }
 

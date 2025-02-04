@@ -10,7 +10,7 @@ import {
 const timestamps = {
   createdAt: timestamp().defaultNow().notNull(),
   updatedAt: timestamp().default(
-    sql`CURRENT_TIMESTAMP(6) on update CURRENT_TIMESTAMP(6)`
+    sql`CURRENT_TIMESTAMP(6) on update CURRENT_TIMESTAMP(6)`,
   ),
 };
 
