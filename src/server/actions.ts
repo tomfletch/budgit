@@ -22,3 +22,19 @@ export async function createMonthlyPayment(
     };
   }
 }
+
+export async function deleteMonthlyPayment(id: number) {
+  try {
+    await queries.deleteMonthlyPayment(id);
+    return {
+      error: false,
+      message: "Successfully deleted the monthly payment",
+    };
+  } catch (error) {
+    console.error(error);
+    return {
+      error: true,
+      message: "There was an error deleting the monthly payment",
+    };
+  }
+}

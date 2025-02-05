@@ -1,6 +1,7 @@
 import { formatCurrency } from "@/utils/currency";
 import { getOrdinal } from "@/utils/dates";
 import { monthlyPaymentsTable } from "@/db/schema";
+import { DeleteMonthlyPaymentButton } from "./DeleteMonthlyPaymentButton";
 
 type MonthlyPaymentsTableProps = {
   monthlyPayments: (typeof monthlyPaymentsTable.$inferSelect)[];
@@ -19,6 +20,7 @@ export async function MonthlyPaymentsTable({
           <td className="px-4 py-2">Company</td>
           <td className="px-4 py-2">Reference</td>
           <td className="px-4 py-2">Notes</td>
+          <td></td>
         </tr>
       </thead>
       <tbody>
@@ -35,6 +37,11 @@ export async function MonthlyPaymentsTable({
             <td className="px-4 py-2">{monthlyPayment.company}</td>
             <td className="px-4 py-2">{monthlyPayment.reference}</td>
             <td className="px-4 py-2">{monthlyPayment.notes}</td>
+            <td>
+              <DeleteMonthlyPaymentButton
+                monthlyPaymentId={monthlyPayment.id}
+              />
+            </td>
           </tr>
         ))}
       </tbody>
