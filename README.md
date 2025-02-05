@@ -11,5 +11,5 @@
 - [x] Github Actions (CI)
 - [ ] Generate budget ID
 - [ ] Auth
-- [ ] Use T3 Env for environment variables
+- [x] Use T3 Env for environment variables
 - [ ] Create a reuseable table component
