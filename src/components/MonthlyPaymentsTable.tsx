@@ -11,7 +11,7 @@ export async function MonthlyPaymentsTable({
 }: MonthlyPaymentsTableProps) {
   return (
     <table className="w-full text-sm">
-      <thead className="border-b border-gray-500 text-gray-300 uppercase text-xs">
+      <thead className="border-b border-gray-500 text-muted-foreground uppercase text-xs">
         <tr>
           <td className="px-4 py-2">Type</td>
           <td className="px-4 py-2 text-right">Amount</td>
@@ -23,7 +23,7 @@ export async function MonthlyPaymentsTable({
       </thead>
       <tbody>
         {monthlyPayments.map((monthlyPayment) => (
-          <tr key={monthlyPayment.id} className="even:bg-gray-900">
+          <tr key={monthlyPayment.id} className="even:bg-muted">
             <td className="px-4 py-2">{monthlyPayment.type}</td>
             <td className="px-4 py-2 text-right">
               {formatCurrency(monthlyPayment.amount)}

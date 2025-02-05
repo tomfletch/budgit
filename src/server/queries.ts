@@ -9,4 +9,10 @@ export const queries = {
       .from(monthlyPaymentsTable)
       .where(eq(monthlyPaymentsTable.budgetId, budgetId));
   },
+  createMonthlyPayment(
+    monthlyPayment: typeof monthlyPaymentsTable.$inferInsert,
+  ) {
+    console.log("inserting", monthlyPayment);
+    return db.insert(monthlyPaymentsTable).values(monthlyPayment).returning();
+  },
 };

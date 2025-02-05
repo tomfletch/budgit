@@ -6,12 +6,16 @@ export default function SandboxPage() {
   async function createMonthlyPaymentsSeedData() {
     "use server";
 
-    await db.insert(budgetsTable).values({ id: 1 });
+    const [budget] = await db.insert(budgetsTable).values({}).returning();
+
+    if (!budget) {
+      throw new Error("Failed to create budget");
+    }
 
     await db.insert(monthlyPaymentsTable).values(
       monthlyPayments.map((p) => ({
         ...p,
-        budgetId: 1,
+        budgetId: budget.id,
       })),
     );
   }

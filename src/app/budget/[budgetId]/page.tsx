@@ -1,3 +1,4 @@
+import { AddMonthlyPaymentDialog } from "@/components/AddMonthlyPaymentDialog";
 import { MonthlyPaymentsTable } from "@/components/MonthlyPaymentsTable";
 import { queries } from "@/server/queries";
 
@@ -16,6 +17,7 @@ export default async function BudgetPage({ params }: BudgetPageProps) {
     <div className="container m-auto">
       <h1>Budgit Page</h1>
       <MonthlyPaymentsTable monthlyPayments={monthlyPayments} />
+      <AddMonthlyPaymentDialog budgetId={parseInt(budgetId)} />
     </div>
   );
 }
