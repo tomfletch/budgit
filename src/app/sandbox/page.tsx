@@ -1,5 +1,5 @@
-import { db } from "@/server/db";
-import { budgetsTable, monthlyPaymentsTable } from "@/server/db/schema";
+import { db } from "@/db/db";
+import { budgetsTable, monthlyPaymentsTable } from "@/db/schema";
 import { monthlyPayments } from "@/app/sandbox/mockData";
 
 export default function SandboxPage() {

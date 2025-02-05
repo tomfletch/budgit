@@ -1,5 +1,5 @@
 import { MonthlyPaymentsTable } from "@/components/MonthlyPaymentsTable";
-import { queries } from "@/server/db/queries";
+import { queries } from "@/server/queries";
 
 type BudgetPageProps = {
   params: Promise<{

@@ -1,6 +1,6 @@
 import { formatCurrency } from "@/utils/currency";
 import { getOrdinal } from "@/utils/dates";
-import { monthlyPaymentsTable } from "@/server/db/schema";
+import { monthlyPaymentsTable } from "@/db/schema";
 
 type MonthlyPaymentsTableProps = {
   monthlyPayments: (typeof monthlyPaymentsTable.$inferSelect)[];

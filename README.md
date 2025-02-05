@@ -8,7 +8,7 @@
 - [ ] Create new monthly payment
 - [ ] Edit monthly payment
 - [ ] Delete monthly payment
-- [ ] Github Actions (CI)
+- [x] Github Actions (CI)
 - [ ] Generate budget ID
 - [ ] Auth
 - [ ] Use T3 Env for environment variables

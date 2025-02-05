@@ -9,13 +9,15 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "format:check": "prettier --check .",
-    "db:push": "drizzle-kit push"
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
     "dotenv": "^16.4.7",
     "drizzle-orm": "^0.39.1",
-    "mysql2": "^3.12.0",
     "next": "15.1.6",
+    "postgres": "^3.4.5",
     "prettier": "^3.4.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
